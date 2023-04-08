@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Login form></title>
+</head>
+<body>
+    <header>
+        Welcome to Creative Minds
+    </header>
+     
+     <div class="container"> 
+        <div class="login-box" >
+            <div class="header-img">
+                
+            </div>
+            <div class="header-text">
+                <p>Login</p>
+            </div>
+            <div class="input-group">
+                <input type="text" class="input-field" id="username" required>
+                <label for="username">UserName</label>
+            </div>
+            <div class="input-group">
+                <input type="password" class="input-field" id="password" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="forgot-pass">
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="input-group" >
+                <button class="input-submit" onclick="func()" > Login </button>
+            </div>
+        </div>
+     </div>
+    
+     <script>
+        function func() 
+        {
+            var user= document.getElementById("username").value;
+            var pass= document.getElementById('password').value;
+            if(user=='admin@gmail.com' && pass.length<=8){
+                alert("sucess full !");
+                window.location.assign("index4.html");
+            }else
+            {
+                alert("Wrong UserName or Password");
+                return
+            }
+        }
+     </script>
+</body>
+</html>
